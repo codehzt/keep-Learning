@@ -58,12 +58,12 @@ public class Brand {
 
     @Override
     public String toString() {
-        return "User{" + "id=" + id +
+        return "Brand{" + "id=" + id +
                 ", brandName=" + brandName +
                 ", companyName=" + companyName +
                 ", ordered=" + ordered +
                 ", description=" + description  +
                 ", status=" + status  +
-                + '}';
+                '}';
     }
 }

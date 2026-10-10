@@ -14,7 +14,17 @@
 <!--        select <include refid="brand_column" />-->
 <!--        from tb_brand;-->
 <!--    </select>-->
-        <select id="selectAll" resultMap="brandResultMap">
-            select * from tb_brand;
-        </select>
+    <select id="selectAll" resultMap="brandResultMap">
+        select * from tb_brand;
+    </select>
+
+    <select id="selectById" resultMap="brandResultMap">
+        select * from tb_brand where id = #{id};
+<!--        select * from tb_brand where id &lt; #{id};-->
+<!--        select * from tb_brand where id-->
+<!--        <![CDATA[-->
+<!--        <-->
+<!--        ]]> #{id};-->
+
+    </select>
 </mapper>
