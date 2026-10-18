@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/save" method="post">
+        姓名：<input type="text" name="name" id="name"><br>
+        密码：<input type="password" name="password" id="password"><br>
+        性别：<input type="radio" name="gender" value="male">男
+            <label><input type="radio" name="gender" value="female">女<br></label>
+            <!-- <input type="radio" name="gender" value="female">女<br> -->
+        爱好：<input type="checkbox" name="hobby" value="reading">阅读
+            <input type="checkbox" name="hobby" value="traveling">旅游
+            <input type="checkbox" name="hobby" value="sports">运动<br>
+        图像：<input type="file" name="image" id="image"><br>
+        生日：<input type="date" name="birthday" id="birthday"><br>
+        时间：<input type="time" name="time" id="time"><br>
+        日期时间：<input type="datetime-local" name="datetime" id="datetime"><br>
+        学历：<select name="education" id="education">
+                <option value="">--------请选择--------</option>
+                <option value="highschool">高中</option>
+                <option value="bachelor">本科</option>
+                <option value="master">硕士</option>
+                <option value="doctor">博士</option>
+            </select><br>
+        描述：<textarea name="description" id="description" cols="30" rows="10"></textarea><br>
+        <input type="hidden" name="id" id="1">
+
+        <input type="button" name="" id="" value="按钮">
+        <input type="reset" name="" id="" value="重置">
+        <input type="submit" name="" id="" value="提交">
+    </form>
+</body>
+</html>

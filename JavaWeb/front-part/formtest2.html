@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .search-form {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            margin: 20px 0;
+            gap: 10px;
+        }
+
+        .search-form label {
+            margin-right: 5px;
+        }
+
+        .search-form input[type="text"],
+        .search-form select {
+            padding: 5px;
+            width: 260px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .action-buttons{
+            display: inline-block;
+        }
+        .action-buttons button {
+            margin-right: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f2f2f2;
+            margin-top: 20px;
+        }
+        div{
+            width: 80%;
+            margin: 0 auto;/* 居中显示 */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form class="search-form" action="/search" method="post">
+            <label for="name">姓名：</label>
+            <input type="text" id="name" name="name" placeholder="请输入姓名">
+            <label for="gender">性别：</label>
+            <select name="gender" id="gender">
+                <option value=""></option>
+                <option value="male">男</option>
+                <option value="female">女</option>
+            </select>
+    
+        </form>
+    
+        <table>
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>头像</th>
+                    <th>职位</th>
+                    <th>入职日期</th>
+                    <th>最后操作时间</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>令狐冲</td>
+                    <td>男</td>
+                    <td><img class="avatar" src="path/test.png" alt="令狐冲"></td>
+                    <td>讲师</td>
+                    <td>2021-06-15</td>
+                    <td>2024-09-27 15:30</td>
+                    <td class="action-buttons">
+                        <button type="button">编辑</button>
+                        <button type="button">删除</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>任盈盈</td>
+                    <td>女</td>
+                    <td><img class="avatar2" src="path/test.png" alt="令狐冲"></td>
+                    <td>讲师</td>
+                    <td>2021-06-15</td>
+                    <td>2024-09-27 15:30</td>
+                    <td class="action-buttons">
+                        <button type="button">编辑</button>
+                        <button type="button">删除</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    
+        <footer class="footer">
+            <p>
+                &copy; 2024 Your Company. All rights reserved.
+            </p>
+            <p>
+                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+            </p>
+        </footer>
+
+    </div>
+    
+</body>
+</html>
