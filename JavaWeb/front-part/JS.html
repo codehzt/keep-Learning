@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <!-- 放在body标签的底部，页面加载完成后再加载js文件，避免阻塞页面渲染，提高页面加载速度。 -->
+    <script>
+        // alert("这是一个弹窗");
+        let a = 10;
+        a= "hello";
+        a=true;
+
+        // alert(a);
+
+        const pi = 3.14;
+        // pi = 5; // 报错，常量不能被重新赋值
+        console.log(pi);
+        // document.write(pi);
+
+        // 基本数据类型
+        // number NaN
+        // Boolean
+        // null
+        // undefined
+        // String
+        typeof a; // 返回变量的类型
+        document.write(typeof a);
+        a = "hello";
+        let b;
+        document.write(typeof b); // undefined 
+        document.write(typeof null); // object
+
+        // 模版字符串
+        // let name = "张春梦";
+        // let age = 18;
+        // console.log(`我的名字是${name}，今年${age}岁`);
+        // console.log("我的名字是" + name + "，今年" + age + "岁");
+
+        // 函数定义及调用
+        function add(a, b) { //具名函数
+            return a + b;
+        }
+        let result = add(1, 2, 20);
+        console.log(result);
+
+        //匿名函数
+        let add2 = function (a, b) {
+            return a + b;
+        }
+
+        let result2 = (a,b) => a + b; // 箭头函数
+        let result3 = (a,b) => {
+            return a + b;
+        }
+        console.log(result2(1, 3));
+        console.log(result3(1, 4));
+
+        //自定义对象
+        let person = {
+            name: "张三",
+            age: 18,
+            sayHello: function () {
+                console.log("你好，我是" + this.name);
+            },
+            sing() {
+                console.log("唱歌");
+            },
+            dance:() => {// 箭头函数没有自己的this，this指向的是定义时的上下文对象，这里是window
+                console.log("跳舞"+ this);
+            }
+        }
+        person.sayHello();
+        person.sing();
+        person.dance();
+
+        let jsonPerson = JSON.stringify(person); // 将对象转换为JSON字符串
+        console.log(jsonPerson);
+        let objPerson = JSON.parse(jsonPerson); // 将JSON字符串转换为对象
+        console.log(objPerson);
+        console.log(objPerson.name);
+    </script>
+</body>
+</html>

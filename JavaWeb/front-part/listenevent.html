@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" id="btn1" value="点我一下试试">
+    <input type="button" id="btn2" value="点我一下试试">
+
+    <script>
+        let btn1 = document.querySelector("#btn1");
+        btn1.onclick =  () => {//早期的事件绑定方式，后期不推荐使用 多次绑定事件后者覆盖前面
+            alert("你点击了按钮1");
+        }
+
+        let btn2 = document.querySelector("#btn2");
+        btn2.addEventListener("click",  () => {//可以绑定多个事件，推荐使用
+            alert("你点击了按钮22");
+        })
+    </script>
+</body>
+</html>

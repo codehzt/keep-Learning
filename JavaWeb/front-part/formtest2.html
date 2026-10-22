@@ -107,6 +107,30 @@
                         <button type="button">删除</button>
                     </td>
                 </tr>
+                <tr>
+                    <td>风清扬</td>
+                    <td>男</td>
+                    <td><img class="avatar" src="path/test.png" alt="令狐冲"></td>
+                    <td>讲师</td>
+                    <td>2021-06-15</td>
+                    <td>2024-09-27 15:30</td>
+                    <td class="action-buttons">
+                        <button type="button">编辑</button>
+                        <button type="button">删除</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>任我行</td>
+                    <td>男</td>
+                    <td><img class="avatar" src="path/test.png" alt="令狐冲"></td>
+                    <td>讲师</td>
+                    <td>2021-06-15</td>
+                    <td>2024-09-27 15:30</td>
+                    <td class="action-buttons">
+                        <button type="button">编辑</button>
+                        <button type="button">删除</button>
+                    </td>
+                </tr>
             </tbody>
         </table>
     
@@ -121,5 +145,17 @@
 
     </div>
     
+    <script>
+        let trs = document.querySelectorAll('tr');
+        for (let i = 0; i < trs.length; i++) {
+            trs[i].addEventListener('mouseenter', function () {
+                this.style.backgroundColor = '#f2e2e2';
+            });
+            trs[i].addEventListener('mouseleave', function () {
+                this.style.backgroundColor = '#fff';
+            }); 
+            
+        }
+    </script>
 </body>
 </html>
